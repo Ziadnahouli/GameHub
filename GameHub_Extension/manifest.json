@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "Game Hub Download Manager",
+  "version": "6.4",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "notifications",
+    "storage",
+    "downloads",
+    "tabs",
+    "alarms",
+    "scripting",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*",
+    "http://localhost/*"
+  ],
+  "optional_host_permissions": [
+    "*://*.steampowered.com/*",
+    "*://*.epicgames.com/*",
+    "*://*.mediafire.com/*",
+    "*://*.megaup.net/*",
+    "*://*.megadb.net/*",
+    "*://*.gofile.io/*",
+    "*://*.pixeldrain.com/*",
+    "*://*.qiwi.gg/*",
+    "*://*.dood.li/*",
+    "*://*.youtube.com/*",
+    "*://youtu.be/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://127.0.0.1/*",
+      "http://localhost/*"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.steampowered.com/*",
+        "*://*.epicgames.com/*",
+        "*://*.mediafire.com/*",
+        "*://*.megaup.net/*",
+        "*://*.megadb.net/*",
+        "*://*.gofile.io/*",
+        "*://*.pixeldrain.com/*",
+        "*://*.qiwi.gg/*",
+        "*://*.dood.li/*",
+        "*://*.youtube.com/*",
+        "*://youtu.be/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
