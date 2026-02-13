@@ -1,6 +1,6 @@
 /**
  * background.js - Game Hub Pro Service Worker
- * Version: 7.0.0 (Privacy & Advanced Interception)
+ * Version: 6.4 (Privacy & Advanced Interception)
  */
 
 const API_URL = "http://127.0.0.1:5000/api/downloads/add";

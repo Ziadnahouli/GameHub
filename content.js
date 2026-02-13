@@ -1,6 +1,6 @@
 /**
  * content.js - Game Hub Pro Global Interceptor
- * Version: 7.0.0 (Privacy & Blob Protection)
+ * Version: 6.4 (Privacy & Blob Protection)
  */
 
 (() => {
